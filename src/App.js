@@ -1,26 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from './Components/Header';
+import Navigation from './Components/Navigation';
+import Main from './Components/Main';
+
+const divStyle = {
+  backgroundColor: '#dddddd',
+  margin: '10px',
+  outline: '1px solid black',
+  padding: '10px'
+};
+const gridContainer ={
+    display: 'grid',
+    gridColumnGap: '10px',
+    gridRowGap: '10px'
+};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={ divStyle }>
+        <Header/>
+        <div style={ gridContainer }>
+            <Navigation />
+          <Main />
+        </div>
     </div>
   );
 }
-
+                
 export default App;
